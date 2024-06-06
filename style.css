@@ -1,0 +1,73 @@
+
+ * {
+    /* margin: 0; */
+    /* padding: 0; */
+    font-family: sans-serif;
+}
+
+body {
+    background:rgb(43, 42, 40);
+} 
+.container{
+display: flex;
+
+}
+.item {
+    position: relative;
+    transition: transform 0.5ms ease; /* Add transition for the item */
+   
+}
+.image{
+position: relative;
+cursor: pointer;
+overflow: hidden; /* Ensure the zoomed image doesn't overflow the container */
+}
+.name{
+color: white;
+font-size: 24;
+font-weight: 700;
+bottom: 120px;
+margin-left: 30;
+position: absolute;
+line-height: 0.2;
+transition: transform 0.5ms ease; /* Add transition for the name */
+} 
+.country{
+color: rgba(219, 204, 204, 0.703);
+bottom: 70px;
+margin-left: 30;
+font-size:12;
+position: absolute;
+font-weight: 700;
+transition: transform 0.5ms ease; /* Add transition for the country */
+} 
+.know-more {
+    color: rgba(70, 241, 244, 0.703);
+    bottom: 50px;
+    margin-left: 30px;
+    font-size: 12px;
+    position: absolute;
+    font-weight: 700;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5ms ease;
+}
+
+.image-hover-effect {
+    border: 3.5px solid transparent; /* Initial border color */
+    transition: border-color 0.5ms ease, opacity 0.5s ease, transform 0.5s ease; /* Add transform transition */
+}
+
+.image-hover-effect:hover {
+    opacity: 0.2; /* Make image partially transparent on hover */
+    transform: scale(1.1);
+        /* Zoom the image */
+}
+.item:hover .name {
+    transform: translateY(-20px); /* Move name up */
+}
+.item:hover .country {
+    transform: translateY(-20px); /* Move country up */
+}
+.item:hover .know-more {
+    opacity: 1; /* Show "know more" text on hover */
+}
